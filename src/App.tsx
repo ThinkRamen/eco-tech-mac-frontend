@@ -1,4 +1,4 @@
-import { Container } from 'react-bootstrap'
+import Header from './Components/Header'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
 
@@ -8,13 +8,10 @@ function App() {
 	return (
 		<>
 			<BrowserRouter>
-				<main className='py-3'>
-					<Container>
-						<Routes>
-							<Route path='/' element={<HomeView />} />
-						</Routes>
-					</Container>
-				</main>
+				<Header />
+				<Routes>
+					<Route path='/' element={<HomeView />} />
+				</Routes>
 			</BrowserRouter>
 		</>
 	)
