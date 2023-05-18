@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
 
 //Custom Components
+import HomeView from './Views/HomeView'
 function App() {
 	return (
 		<>
@@ -10,7 +11,7 @@ function App() {
 				<main className='py-3'>
 					<Container>
 						<Routes>
-							<Route path='/' element='home' />
+							<Route path='/' element={<HomeView />} />
 						</Routes>
 					</Container>
 				</main>
