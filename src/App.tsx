@@ -1,11 +1,20 @@
-import { Button } from 'react-bootstrap'
+import { Container } from 'react-bootstrap'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
 
+//Custom Components
 function App() {
 	return (
 		<>
-			<h1>eco tech mac</h1>
-			<Button>click me</Button>
+			<BrowserRouter>
+				<main className='py-3'>
+					<Container>
+						<Routes>
+							<Route path='/' element='home' />
+						</Routes>
+					</Container>
+				</main>
+			</BrowserRouter>
 		</>
 	)
 }
