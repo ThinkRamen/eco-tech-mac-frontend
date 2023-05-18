@@ -1,11 +1,18 @@
-import { Button } from 'react-bootstrap'
+import Header from './Components/Header'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
 
+//Custom Components
+import HomeView from './Views/HomeView'
 function App() {
 	return (
 		<>
-			<h1>eco tech mac</h1>
-			<Button>click me</Button>
+			<BrowserRouter>
+				<Header />
+				<Routes>
+					<Route path='/' element={<HomeView />} />
+				</Routes>
+			</BrowserRouter>
 		</>
 	)
 }
